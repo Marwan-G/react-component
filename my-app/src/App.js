@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Productlist from "./Productlist";
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const data2 = [
+    {name: "AWS Certified", price: 200, id: 4}, {name: "AWS Certified", price: 200, id: 5}, {
+        name: "AWS Certified",
+        price: 200,
+        id: 9
+    }
+]
+
+const data = [
+    {name: "AWS", price: 200, id: 4}, {name: "AWS", price: 200, id: 5}, {name: "AWS", price: 200, id: 9}
+]
+
+const App = () => {
+
+    return (
+        <div>
+            <Productlist props={data}/>
+            <Productlist props={data2}/>
+        </div>
+
+
+    )
 }
 
-export default App;
+
+export default App; 
