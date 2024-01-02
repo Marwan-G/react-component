@@ -1,11 +1,21 @@
 import React from "react";
+import Itemdesc from "./Itemdesc";
 
 const Productlist = ({props}) => {
     const data = Object.values(props)
     const listItem = data.map((item) => {
-        return <li key={item.id}> {item.name} {item.price}</li>
+        return (
+            <div>
+                <li key={item.id}> {item.name} {item.price}</li>
+                <Itemdesc description={item.description}/>
+            </div>
+        )
     })
-    return <ul> {listItem} </ul>
+    return (
+        <div>
+            <ul> {listItem} </ul>
+        </div>
+
+    )
 }
 export default Productlist;
-

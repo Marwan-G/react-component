@@ -1,24 +1,27 @@
 import Productlist from "./Productlist";
 import React from "react";
-
-const data2 = [
-    {name: "AWS Certified", price: 200, id: 4}, {name: "AWS Certified", price: 200, id: 5}, {
-        name: "AWS Certified",
-        price: 200,
-        id: 9
-    }
-]
+import Button from "./Button";
+import Card from "./Card";
 
 const data = [
-    {name: "AWS", price: 200, id: 4}, {name: "AWS", price: 200, id: 5}, {name: "AWS", price: 200, id: 9}
+    { name: "AWS S3", price: 200, id: 4, description: "course1" }, {
+        name: "AWS GateWay",
+        price: 200,
+        id: 5,
+        description: "course2"
+    }, { name: "AWS Firewall", price: 200, id: 9, description: "course3" }
 ]
 
 const App = () => {
 
     return (
         <div>
-            <Productlist props={data}/>
-            <Productlist props={data2}/>
+            <Productlist props={data} />
+            <Card>
+                <Button>hey</Button>
+                <Button>Marwan</Button>
+            </Card>
+
         </div>
 
 
